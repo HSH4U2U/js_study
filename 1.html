@@ -584,7 +584,7 @@ printMinors(birthdayData);
 </html> -->
 
 
-
+<!--
 <!DOCTYPE html>
 <html>
   <head>
@@ -657,6 +657,15 @@ printMinors(birthdayData);
       crossorigin="anonymous"></script>
     <script>
       var musicFile = new Audio("audio/loop.mp3");
+      var kick = new Audio("audio/01_kick_drum.wav");
+      var closed_hihat = new Audio("audio/02_closed_hihat.wav");
+      var open_hihat = new Audio("audio/03_open_hihat.wav");
+      var clap = new Audio("audio/04_clap.wav");
+      var snap = new Audio("audio/05_snap.wav");
+      var crash = new Audio("audio/06_crash.wav");
+      var tom1 = new Audio("audio/07_tom1.wav");
+      var tom2 = new Audio("audio/08_tom2.wav");
+      var tambourine = new Audio("audio/09_tambourine.wav");
 
       $('#play-btn').on('click', playMusic);
       $('#stop-btn').on('click', stopMusic);
@@ -672,14 +681,135 @@ printMinors(birthdayData);
 
       //키보드 이벤트
       function playing(event) {
-        if (event['key'] >= 1 && event['key'] <=9) {
-          $(this).addClass('playing')
+        if (event['key'] == 1) {
+          kick.play();
+          kick.currentTime = 0;
+        }
+        if (event['key'] == 2) {
+          closed_hihat.play();
+          closed_hihat.currentTime = 0;
+        }
+        if (event['key'] == 3) {
+          open_hihat.play();
+          open_hihat.currentTime = 0;
+        }
+        if (event['key'] == 4) {
+          clap.play();
+          clap.currentTime = 0;
+        }
+        if (event['key'] == 5) {
+          snap.play();
+          snap.currentTime = 0;
+        }
+        if (event['key'] == 6) {
+          crash.play();
+          crash.currentTime = 0;
+        }
+        if (event['key'] == 7) {
+          tom1.play();
+          tom1.currentTime = 0;
+        }
+        if (event['key'] == 8) {
+          tom2.play();
+          tom2.currentTime = 0;
+        }
+        if (event['key'] == 9) {
+          tambourine.play();
+          tambourine.currentTime = 0;
         }
       }
 
     </script>
   </body>
 </html>
+-->
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>청기 백기</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="flags">
+      <img class="flag blue dot" src="images/blue_dot.png" width="100">
+      <img class="flag red" src="images/red_solid.png" width="100">
+      <img class="flag blue" src="images/blue_solid.png" width="100">
+      <img class="flag blue dot" src="images/blue_dot.png" width="100">
+      <img class="flag white dot" src="images/white_dot.png" width="100">
+      <img class="flag blue" src="images/blue_solid.png" width="100">
+    </div>
+
+    <div class="buttons">
+      <button id="btn1">청기 내려</button>
+      <button id="btn2">청기 내리지 말고 백기 내려</button>
+      <button id="btn3">점선 청기 내려</button>
+    </div>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>깨깨오톡</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <button id="close" class="header-btn"></button>
+      <button id="minimize" class="header-btn"></button>
+      <button id="maximize" class="header-btn"></button>
+
+      <img id="profile-pic" src="images/young.png" width="50" height="50">
+      <span id="username">구남친</span>
+    </div>
+
+    <div class="chatbox">
+      <div class="friend-bubble bubble">
+        잘 지내?
+      </div>
+      <div class="friend-bubble bubble">
+        자니?
+      </div>
+    </div>
+
+    <div class="text-box">
+      <textarea placeholder="대화내용이 들어갑니다."></textarea>
+      <button id="send">전송</button>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
 
 
 
